@@ -1,0 +1,24 @@
+{
+  "name": "jam-project",
+  "version": "1.0.0",
+  "description": "Just a template for a JS gamejam",
+  "main": "index.js",
+  "dependencies": {
+    "phaser": "^3.17.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "cp-cli": "^2.0.0",
+    "http-server": "^0.11.1",
+    "tslib": "^1.10.0"
+  },
+  "scripts": {
+    "test": "test",
+    "build": "npm run build-js && npm run build-html",
+    "build-js": "browserify src/client/js/main.js -o build/js/bundled.js",
+    "build-html": "cp-cli src/client/html/index.html build/index.html",
+    "start-dev": "http-server -p 8080 build"
+  },
+  "author": "",
+  "license": "MIT"
+}
